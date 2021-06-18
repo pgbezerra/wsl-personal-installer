@@ -13,6 +13,7 @@ development.
 - Git
 - ZSH
 - Antigen
+- Configure vim
 
 We setup Git to retrieve credentials from windows, then we can download github
 repos using HTTPS authenticating through SSO with your browser.

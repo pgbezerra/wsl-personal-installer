@@ -21,9 +21,16 @@ if ! id "$USERNAME" >/dev/null 2>&1; then
 fi
 
 USER_HOME=$(eval echo "~$USERNAME")
+INSTALL_DIR=$(realpath $(dirname "$0"))
 
 apt-get update
 
-. ./configure_git.sh
+set -e
+
+su $USERNAME -c -- \
+  ./configure_git.sh \
+  ./vim/configure.sh
+
 . ./install_zsh.sh
 . ./install_deps.sh
+. ./vim/configure.sh
