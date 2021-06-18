@@ -3,6 +3,11 @@
 This repo configure a Ubuntu WSL to be ready and pleasant to work with software
 development.
 
+## Requirements
+
+- Ubuntu WSL installed and running
+- Git installed on windows: [Download](https://git-scm.com/downloads)
+
 ## What will be configured
 
 - Git
@@ -19,8 +24,11 @@ available out of the box, as some autocompletes and enhanced history with
 
 ## How to execute
 
-- copy `example.env` to `.env` and replace variables
-- run `./install.sh`
+- Open your WSL terminal
+- Clone this repo: `git clone https://github.com/paulobezerr/wsl-personal-installer ~/.wsl-personal-installer`
+- Get into it: `cd ~/.wsl-personal-installer`
+- Copy `example.env` to `.env` and replace variables
+- Run `./install.sh`
 - Reopen your terminal
 - Enjoy your setup
 - Contribute with this repo :smiley:
