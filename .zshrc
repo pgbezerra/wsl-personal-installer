@@ -1,4 +1,6 @@
 source $HOME/.local/bin/antigen.zsh
+
+export PATH=$PATH:$HOME/.local/bin
 ​
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
