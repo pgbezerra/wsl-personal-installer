@@ -26,3 +26,4 @@ apt-get update
 
 . ./configure_git.sh
 . ./install_zsh.sh
+. ./install_deps.sh
