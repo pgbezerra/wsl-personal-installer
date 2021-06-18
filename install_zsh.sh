@@ -9,7 +9,7 @@ chown $USERNAME:$USERNAME $USER_HOME/.local/bin
 curl -L git.io/antigen > $USER_HOME/.local/bin/antigen.zsh
 chown $USERNAME:$USERNAME $USER_HOME/.local/bin/antigen.zsh
 
-if test -f $USER_HOME/.zshrc
+if test -L $USER_HOME/.zshrc || test -f $USER_HOME/.zshrc
 then
   read -p "File ~/.zshrc already exists, can we drop it to continue? " -n1 REPLY
   echo
@@ -23,7 +23,7 @@ then
   fi
 fi
 
-ln -s $(realpath $(dirname "$0"))/.zshrc $USER_HOME/.zshrc
+ln -s $INSTALL_DIR/.zshrc $USER_HOME/.zshrc
 
 chsh -s $(which zsh) $USERNAME
 
