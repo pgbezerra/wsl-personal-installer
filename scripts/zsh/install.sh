@@ -23,7 +23,7 @@ then
   fi
 fi
 
-ln -s $INSTALL_DIR/.zshrc $USER_HOME/.zshrc
+ln -s $INSTALL_DIR/scripts/zsh/.zshrc $USER_HOME/.zshrc
 
 chsh -s $(which zsh) $USERNAME
 

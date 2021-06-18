@@ -28,9 +28,9 @@ apt-get update
 set -e
 
 su $USERNAME -c -- \
-  ./configure_git.sh \
-  ./vim/configure.sh
+  ./scripts/configure_git.sh \
+  ./scripts/vim/configure.sh
 
-. ./install_zsh.sh
-. ./install_deps.sh
-. ./vim/configure.sh
+. ./scripts/zsh/install.sh
+. ./scripts/install_deps.sh
+. ./scripts/vim/configure.sh

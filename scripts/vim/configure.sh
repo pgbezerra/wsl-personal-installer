@@ -28,16 +28,16 @@ then
 fi
 
 # Install vim configuration on home directory
-su $USERNAME -c "ln -s $INSTALL_DIR/vim/.vimrc $USER_HOME/.vimrc"
+su $USERNAME -c "ln -s $INSTALL_DIR/scripts/vim/.vimrc $USER_HOME/.vimrc"
 
 # Color scheme will throw error before PlugInstall. This is why we comment it,
 # install plugins and uncomment
-sed -i 's/^\(colorscheme\s.*\)$/" \1/mg' vim/.vimrc
+sed -i 's/^\(colorscheme\s.*\)$/" \1/mg' $INSTALL_DIR/scripts/vim/.vimrc
 
 # Install all vim extensions and exit
 su $USERNAME -c "vim -c 'PlugInstall' -c 'qa!'"
 
 # Get color schema back on vim config
-sed -i 's/^"\s\(colorscheme\s.*\)$/\1/mg' vim/.vimrc
+sed -i 's/^"\s\(colorscheme\s.*\)$/\1/mg' $INSTALL_DIR/scripts/vim/.vimrc
 
 echo 'Vim setup completed.'
