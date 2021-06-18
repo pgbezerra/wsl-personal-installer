@@ -6,15 +6,13 @@ mkdir -p $USER_HOME/.local/bin
 chown $USERNAME:$USERNAME $USER_HOME/.local
 chown $USERNAME:$USERNAME $USER_HOME/.local/bin
 
-curl -L git.io/antigen > $USER_HOME/.local/bin/antigen.zsh
+curl -L git.io/antigen >$USER_HOME/.local/bin/antigen.zsh
 chown $USERNAME:$USERNAME $USER_HOME/.local/bin/antigen.zsh
 
-if test -L $USER_HOME/.zshrc || test -f $USER_HOME/.zshrc
-then
+if test -L $USER_HOME/.zshrc || test -f $USER_HOME/.zshrc; then
   read -p "File ~/.zshrc already exists, can we drop it to continue? " -n1 REPLY
   echo
-  if [[ $REPLY =~ ^[Yy]$ ]]
-  then
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
     rm -v $USER_HOME/.zshrc
   else
     echo "Abort installation because you already have .zshrc file."

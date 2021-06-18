@@ -13,12 +13,10 @@ mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 su $USERNAME -c "curl -fLo $USER_HOME/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 
-if test -L $USER_HOME/.vimrc || test -f $USER_HOME/.vimrc
-then
+if test -L $USER_HOME/.vimrc || test -f $USER_HOME/.vimrc; then
   read -p "File ~/.vimrc already exists, can we drop it to continue? " -n1 REPLY
   echo
-  if [[ $REPLY =~ ^[Yy]$ ]]
-  then
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
     rm -v $USER_HOME/.vimrc
   else
     echo "Abort installation because you already have .vimrc file."

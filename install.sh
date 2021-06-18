@@ -1,16 +1,13 @@
 #!/bin/bash
 
-if [ -f .env ]
-then
+if [ -f .env ]; then
   export $(cat .env | xargs)
 else
   echo "You need to write a .env file. Use example.env to create yours"
   exit 1
 fi
 
-
-if test "x$(id -u)" != "x0"
-then
+if test "x$(id -u)" != "x0"; then
   echo "Please run as root"
   exit 2
 fi
