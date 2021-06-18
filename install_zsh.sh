@@ -3,6 +3,7 @@
 apt-get install -y zsh
 
 mkdir -p $USER_HOME/.local/bin
+chown $USERNAME:$USERNAME $USER_HOME/.local
 chown $USERNAME:$USERNAME $USER_HOME/.local/bin
 
 curl -L git.io/antigen > $USER_HOME/.local/bin/antigen.zsh
