@@ -24,10 +24,10 @@ apt-get update
 
 set -e
 
-su $USERNAME -c -- \
+. ./scripts/install_deps.sh
+
+su $USERNAME -- \
   ./scripts/configure_git.sh \
   ./scripts/vim/configure.sh
 
 . ./scripts/zsh/install.sh
-. ./scripts/install_deps.sh
-. ./scripts/vim/configure.sh

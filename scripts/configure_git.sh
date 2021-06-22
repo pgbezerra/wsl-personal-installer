@@ -8,3 +8,6 @@ git config --global push.default current
 git config --global core.editor vim
 
 echo 'Git credendials and user configured.'
+
+. $HOME/.nvm/nvm.sh
+npm install -g commitizen
