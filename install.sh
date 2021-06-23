@@ -31,3 +31,4 @@ su $USERNAME -- \
   ./scripts/vim/configure.sh
 
 . ./scripts/zsh/install.sh
+. ./scripts/gcloud.sh

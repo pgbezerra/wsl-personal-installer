@@ -1,6 +1,7 @@
 #!/bin/bash
 
-apt-get install -y python-is-python3 python3-pip build-essential libssl-dev
+apt-get install -y python-is-python3 python3-pip build-essential libssl-dev \
+    apt-transport-https ca-certificates gnupg
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh >nvm_installer.sh
 chmod +x nvm_installer.sh

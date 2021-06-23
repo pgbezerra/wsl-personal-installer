@@ -17,6 +17,7 @@ development.
 - Configure vim
 - NVM
   - Node 14.17.1 pre installed
+- GCloud
 
 We setup Git to retrieve credentials from windows, then we can download github
 repos using HTTPS authenticating through SSO with your browser.
