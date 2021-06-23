@@ -5,4 +5,4 @@ echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.clou
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
 
 apt update
-apt install -y google-cloud-sdk
+apt install -y google-cloud-sdk kubectl
