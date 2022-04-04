@@ -9,3 +9,4 @@ su $USERNAME -- nvm_installer.sh
 rm nvm_installer.sh
 
 su - $USERNAME -c '. $HOME/.nvm/nvm.sh && nvm install 14.17.1'
+su - $USERNAME -c '. $HOME/.nvm/nvm.sh && nvm install 16.14.0'
